@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Silent Coders Ajax File Upload</title>
+		<link rel="stylesheet" type="text/css" href="css/sc_ajax_file_upload.css" />
+	</head>
+	
+	<body>
+		<div id="sc_image_upload_demo"></div>
+	
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/sc_ajax_file_upload.js"></script>
+		<script>
+		
+		var options = {
+				form_name : "form_sc_image_upload_demo",
+				allowed_file_types : [ "image/png", "image/jpg", "image/gif", "image/jpeg" ],
+				max_file_size	  : 500000, // 500KB
+				file_param_name   : 'file',
+				extra_params	  : { file_name : "image.png" },
+				url 			  : 'webservice.php',
+				onResponse : function( response ){
+					// do something 
+					console.log( response );
+					
+				},
+				
+			};
+		$( '#sc_image_upload_demo' ).SCAjaxFileUpload( options );
+		
+		</script>
+	</body>
+</html>
