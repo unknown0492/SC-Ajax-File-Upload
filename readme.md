@@ -1,3 +1,3 @@
 #Silent Coders Ajax File Upload Plugin
 
-somethings
+somethings and somethings
